@@ -134,14 +134,7 @@ class ReportsController extends Controller
     public function order()
     {
         $array = [23, 10, 45, -3];
-        $arrayOrder = $this->recursiveOrder($array);
-        return response()->json($arrayOrder);
-    }
-
-    public function recursiveOrder(&$array)
-    {
-        if (is_array($array)) {
-
-        }
+        rsort($array);
+        return response()->json($array);
     }
 }
