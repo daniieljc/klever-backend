@@ -141,8 +141,7 @@ class ReportsController extends Controller
     public function recursiveOrder(&$array)
     {
         if (is_array($array)) {
-            ksort($array);
-            array_walk($array, 'ksort_recursive');
+
         }
     }
 }
